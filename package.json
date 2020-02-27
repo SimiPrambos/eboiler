@@ -1,0 +1,44 @@
+{
+  "name": "eboiler",
+  "version": "1.0.0",
+  "description": "ExpressJs boilerplate",
+  "main": "index.js",
+  "repository": "https://github.com/SimiPrambos/eboiler.git",
+  "author": {
+    "name": "Simi Prambos",
+    "email": "simi.prambos@gmail.com"
+  },
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "NODE_ENV=production node dist",
+    "start:dev": "NODE_ENV=development babel-node src",
+    "start:nobuild": "NODE_ENV=production node_modules/.bin/babel-node src",
+    "build": "babel ./src --out-dir dist",
+    "clean": "rimraf dist",
+    "watch": "nodemon",
+    "migrate": "npx sequelize db:migrate",
+    "seed": "npx sequelize db:seed:all"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.6",
+    "@babel/node": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.6",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "nodemon": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "sequelize-cli": "^5.5.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.8.4",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "lumie": "^0.1.2",
+    "morgan": "^1.9.1",
+    "sequelize": "^5.21.5",
+    "winston": "^3.2.1"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "plugins": [
+    ["@babel/plugin-transform-runtime"],
+    ["@babel/plugin-proposal-class-properties"],
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@config": "./src/config",
+          "@controllers": "./src/controllers",
+          "@lib": "./src/lib",
+          "@services": "./src/services",
+          "@models": "./src/models",
+          "@middlewares": "./src/middlewares",
+          "@utils": "./src/utils"
+        }
+      }
+    ]
+  ]
+}
